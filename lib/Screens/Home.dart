@@ -67,7 +67,7 @@ class Home extends StatelessWidget {
       )),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(5),
+          padding: const EdgeInsets.all(6),
           child: Column(
             children: [
               SingleChildScrollView(
@@ -98,7 +98,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 7,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -107,57 +107,72 @@ class Home extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Trip(
+                          MaterialPageRoute(
+                            builder: (context) => Trip(
                               image: item["image"]!,
-                              text: item["text"]!)),
+                              text: item["text"]!,
+                            ),
+                          ),
                         );
                       },
                       child: Container(
                         child: Stack(
-                            children: [
-                              Container(
-                                width: 320,
-                                height: 250,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(30),
-                                  image: DecorationImage(
-                                    image: AssetImage(item["image"]!),
-                                    fit: BoxFit.cover,
-                                  ),
+                          children: [
+                            Container(
+                              width: 320,
+                              height: 250,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                image: DecorationImage(
+                                  image: AssetImage(item["image"]!),
+                                  fit: BoxFit.cover,
                                 ),
                               ),
-                              SizedBox(height: 5),
-                              Positioned(
-                                bottom: 20,
-                                left: 20,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Row(
+                            ),
+                            Positioned(
+                              bottom: 20,
+                              left: 20,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox(
+                                    width: 280,
+                                    child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      spacing: 70,
                                       children: [
-                                        Text(item["text"]!, style: TextStyle(color: Colors.white , fontSize: 22 , fontWeight: FontWeight.bold)),
-                                        Icon(Icons.favorite , color: Colors.red, size: 22,)
+                                        Text(
+                                          item["text"]!,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 22,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        Icon(
+                                          Icons.favorite,
+                                          color: Colors.red,
+                                          size: 22,
+                                        ),
                                       ],
                                     ),
-                                    SizedBox(height: 10,),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      children: [
-                                        Icon(Icons.star , color: Colors.yellow, size: 22,),
-                                        Icon(Icons.star , color: Colors.yellow,size: 22,),
-                                        Icon(Icons.star , color: Colors.yellow,size: 22,),
-                                        Icon(Icons.star , color: Colors.yellow,size: 22,),
-                                        Icon(Icons.star , color: Colors.yellow,size: 22,),
-                                        Text("4.5", style: TextStyle(color: Colors.white)),
-                                      ],
-                                    ),
-                                  ],
-                                ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Icon(Icons.star, color: Colors.yellow, size: 22),
+                                      Icon(Icons.star, color: Colors.yellow, size: 22),
+                                      Icon(Icons.star, color: Colors.yellow, size: 22),
+                                      Icon(Icons.star, color: Colors.yellow, size: 22),
+                                      Icon(Icons.star, color: Colors.yellow, size: 22),
+                                      Text("4.5", style: TextStyle(color: Colors.white)),
+                                    ],
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   }).toList(),
@@ -271,39 +286,47 @@ class Home extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Positioned(
-                          bottom: 20,
-                          left: 5,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    items[i]["text"]!,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Icon(Icons.favorite, color: Colors.red, size: 20),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Icon(Icons.star, color: Colors.yellow, size: 18),
-                                  Icon(Icons.star, color: Colors.yellow, size: 18),
-                                  Icon(Icons.star, color: Colors.yellow, size: 18),
-                                  Icon(Icons.star, color: Colors.yellow, size: 18),
-                                  Icon(Icons.star, color: Colors.yellow, size: 18),
-                                  Text("4.5", style: TextStyle(color: Colors.white)),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
+                Positioned(
+                bottom: 10,
+                left: 5,
+                child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                SizedBox(
+                width: 160,
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                Text(
+                items[i]["text"]!,
+                style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                ),
+                ),
+                Icon(
+                Icons.favorite,
+                color: Colors.red,
+                size: 18,
+                ),
+                ],
+                ),
+                ),
+                Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                Icon(Icons.star, color: Colors.yellow, size: 15),
+                Icon(Icons.star, color: Colors.yellow, size: 15),
+                Icon(Icons.star, color: Colors.yellow, size: 15),
+                Icon(Icons.star, color: Colors.yellow, size: 15),
+                Icon(Icons.star, color: Colors.yellow, size: 15),
+                Text("4.5", style: TextStyle(color: Colors.white)),
+                ],
+                ),
+                ],
+                ),
+                ),
                       ],
                     ),
                   ),
