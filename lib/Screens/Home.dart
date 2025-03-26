@@ -66,276 +66,273 @@ class Home extends StatelessWidget {
         ],
       )),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(6),
-          child: Column(
-            children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Row(
-                    children: [
-                      Text("Popular" , style: TextStyle(fontWeight: FontWeight.bold , fontSize: 17),),
-                      SizedBox(width: 15,),
-                      Text("Featured" , style: TextStyle(fontSize: 17),),
-                      SizedBox(width: 15,),
-                      Text("Most Visited" , style: TextStyle(fontSize: 17),),
-                      SizedBox(width: 15,),
-                      Text("Europe" , style: TextStyle(fontSize: 17),),
-                      SizedBox(width: 15,),
-                      Text("Asia" , style: TextStyle(fontSize: 17),),
-                      SizedBox(width: 15,),
-                      Text("Africa" , style: TextStyle(fontSize: 17),),
-                      SizedBox(width: 15,),
-                      Text("North America" , style: TextStyle(fontSize: 17),),
-                      SizedBox(width: 15,),
-                      Text("South America" , style: TextStyle(fontSize: 17),),
-                      SizedBox(width: 15,),
-                      Text("Australia" , style: TextStyle(fontSize: 17),),
-                      SizedBox(width: 15,),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 7,),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
+        child: Column(
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding: const EdgeInsets.all(12),
                 child: Row(
-                  children: items.map((item) {
-                    return TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Trip(
-                              image: item["image"]!,
-                              text: item["text"]!,
-                            ),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        child: Stack(
-                          children: [
-                            Container(
-                              width: 320,
-                              height: 250,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30),
-                                image: DecorationImage(
-                                  image: AssetImage(item["image"]!),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              bottom: 20,
-                              left: 20,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    width: 280,
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          item["text"]!,
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 22,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        Icon(
-                                          Icons.favorite,
-                                          color: Colors.red,
-                                          size: 22,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  SizedBox(height: 10),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Icon(Icons.star, color: Colors.yellow, size: 22),
-                                      Icon(Icons.star, color: Colors.yellow, size: 22),
-                                      Icon(Icons.star, color: Colors.yellow, size: 22),
-                                      Icon(Icons.star, color: Colors.yellow, size: 22),
-                                      Icon(Icons.star, color: Colors.yellow, size: 22),
-                                      Text("4.5", style: TextStyle(color: Colors.white)),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  }).toList(),
-                ),
-              ),
-              SizedBox(height: 5,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 27,
-                    height: 7,
-                    decoration: BoxDecoration(
-                      color: Colors.grey,
-                      borderRadius: BorderRadius.circular(30)
-                    ),
-                  ),
-                  SizedBox(width: 5,),
-                  Container(
-                    width: 7,
-                    height: 7,
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(30)
-                    ),
-                  ),
-                  SizedBox(width: 5,),
-                  Container(
-                    width: 7,
-                    height: 7,
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(30)
-                    ),
-                  ),
-                  SizedBox(width: 5,),
-                  Container(
-                    width: 7,
-                    height: 7,
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(30)
-                    ),
-                  ),
-                  SizedBox(width: 5,),
-                  Container(
-                    width: 7,
-                    height: 7,
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(30)
-                    ),
-                  ),
-                  SizedBox(width: 5,),
-                  Container(
-                    width: 7,
-                    height: 7,
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(30)
-                    ),
-                  ),
-                  SizedBox(width: 5,),
-                ],
-              ),
-              SizedBox(height: 25,),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Recommended" ,style: TextStyle(fontWeight: FontWeight.bold , fontSize: 20),),
-                    Text("View All"),
+                    Text("Popular" , style: TextStyle(fontWeight: FontWeight.bold , fontSize: 17),),
+                    SizedBox(width: 15,),
+                    Text("Featured" , style: TextStyle(fontSize: 17),),
+                    SizedBox(width: 15,),
+                    Text("Most Visited" , style: TextStyle(fontSize: 17),),
+                    SizedBox(width: 15,),
+                    Text("Europe" , style: TextStyle(fontSize: 17),),
+                    SizedBox(width: 15,),
+                    Text("Asia" , style: TextStyle(fontSize: 17),),
+                    SizedBox(width: 15,),
+                    Text("Africa" , style: TextStyle(fontSize: 17),),
+                    SizedBox(width: 15,),
+                    Text("North America" , style: TextStyle(fontSize: 17),),
+                    SizedBox(width: 15,),
+                    Text("South America" , style: TextStyle(fontSize: 17),),
+                    SizedBox(width: 15,),
+                    Text("Australia" , style: TextStyle(fontSize: 17),),
+                    SizedBox(width: 15,),
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
-          SingleChildScrollView(
-            child: GridView.builder(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 0.9,
-              ),
-              itemCount: items.length,
-              itemBuilder: (context, i) {
-                return TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Trip(
-                          image: items[i]["image"]!,
-                          text: items[i]["text"]!,
-                      )
-                      ),
-                    );
-                  },
-                  child: Container(
-                    child: Stack(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                              image: AssetImage(items[i]["image"]!),
-                              fit: BoxFit.cover,
-                            ),
+            ),
+            SizedBox(height: 7,),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: items.map((item) {
+                  return TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Trip(
+                            image: item["image"]!,
+                            text: item["text"]!,
                           ),
                         ),
-                Positioned(
-                bottom: 10,
-                left: 5,
-                child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                SizedBox(
-                width: 160,
-                child: Row(
+                      );
+                    },
+                    child: Container(
+                      child: Stack(
+                        children: [
+                          Container(
+                            width: 320,
+                            height: 250,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              image: DecorationImage(
+                                image: AssetImage(item["image"]!),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 20,
+                            left: 20,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: 280,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        item["text"]!,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.favorite,
+                                        color: Colors.red,
+                                        size: 22,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 10),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Icon(Icons.star, color: Colors.yellow, size: 22),
+                                    Icon(Icons.star, color: Colors.yellow, size: 22),
+                                    Icon(Icons.star, color: Colors.yellow, size: 22),
+                                    Icon(Icons.star, color: Colors.yellow, size: 22),
+                                    Icon(Icons.star, color: Colors.yellow, size: 22),
+                                    Text("4.5", style: TextStyle(color: Colors.white)),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
+            ),
+            SizedBox(height: 5,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 27,
+                  height: 7,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(30)
+                  ),
+                ),
+                SizedBox(width: 5,),
+                Container(
+                  width: 7,
+                  height: 7,
+                  decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                ),
+                SizedBox(width: 5,),
+                Container(
+                  width: 7,
+                  height: 7,
+                  decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                ),
+                SizedBox(width: 5,),
+                Container(
+                  width: 7,
+                  height: 7,
+                  decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                ),
+                SizedBox(width: 5,),
+                Container(
+                  width: 7,
+                  height: 7,
+                  decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                ),
+                SizedBox(width: 5,),
+                Container(
+                  width: 7,
+                  height: 7,
+                  decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                ),
+                SizedBox(width: 5,),
+              ],
+            ),
+            SizedBox(height: 25,),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 20,
+                right: 20,
+              ),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                Text(
-                items[i]["text"]!,
-                style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                ),
-                ),
-                Icon(
-                Icons.favorite,
-                color: Colors.red,
-                size: 18,
-                ),
+                  Text("Recommended" ,style: TextStyle(fontWeight: FontWeight.bold , fontSize: 20),),
+                  Text("View All"),
                 ],
-                ),
-                ),
-                Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                Icon(Icons.star, color: Colors.yellow, size: 15),
-                Icon(Icons.star, color: Colors.yellow, size: 15),
-                Icon(Icons.star, color: Colors.yellow, size: 15),
-                Icon(Icons.star, color: Colors.yellow, size: 15),
-                Icon(Icons.star, color: Colors.yellow, size: 15),
-                Text("4.5", style: TextStyle(color: Colors.white)),
-                ],
-                ),
-                ],
-                ),
-                ),
-                      ],
-                    ),
-                  ),
-                );
-              },
+              ),
             ),
+            SizedBox(height: 10,),
+        SingleChildScrollView(
+          child: GridView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 0.9,
+            ),
+            itemCount: items.length,
+            itemBuilder: (context, i) {
+              return TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Trip(
+                        image: items[i]["image"]!,
+                        text: items[i]["text"]!,
+                    )
+                    ),
+                  );
+                },
+                child: Container(
+                  child: Stack(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                            image: AssetImage(items[i]["image"]!),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+              Positioned(
+              bottom: 10,
+              left: 5,
+              child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              SizedBox(
+              width: 160,
+              child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              Text(
+              items[i]["text"]!,
+              style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              ),
+              ),
+              Icon(
+              Icons.favorite,
+              color: Colors.red,
+              size: 18,
+              ),
+              ],
+              ),
+              ),
+              Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+              Icon(Icons.star, color: Colors.yellow, size: 15),
+              Icon(Icons.star, color: Colors.yellow, size: 15),
+              Icon(Icons.star, color: Colors.yellow, size: 15),
+              Icon(Icons.star, color: Colors.yellow, size: 15),
+              Icon(Icons.star, color: Colors.yellow, size: 15),
+              Text("4.5", style: TextStyle(color: Colors.white)),
+              ],
+              ),
+              ],
+              ),
+              ),
+                    ],
+                  ),
+                ),
+              );
+            },
           ),
-            ],
-          ),
+        ),
+          ],
         ),
       ),
       bottomNavigationBar:  Container(
@@ -364,10 +361,10 @@ class Home extends StatelessWidget {
               iconSize: 30,
               backgroundColor: Colors.white,
               items: [
-                BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-                BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: ''),
-                BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
-                BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+                BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+                BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: 'Calender'),
+                BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+                BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
               ],
             ),
           ),
