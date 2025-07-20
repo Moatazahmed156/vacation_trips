@@ -1,16 +1,37 @@
-# vacation_trips
+# 🗺️ Flutter Places App
 
-A new Flutter project.
+A simple Flutter app that displays a list of places and includes:
 
-## Getting Started
+- ✅ **Start Screen** – Entry screen with a navigation button  
+- ✅ **Home Screen** – Shows places using ListView or GridView (toggle)  
+- ✅ **Details Screen** – Displays details about a selected place
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **3 Screens Navigation** using `Navigator`  
+- **ListView & GridView Toggle** to display places  
+- **Reusable Widgets** for displaying place info  
+- **Mock Data** used for demonstration purposes  
+- **Clean & Minimal UI**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🏗️ Structure
+
+- `StartScreen` – Welcome screen with a button to enter the app  
+- `HomeScreen` – Displays a toggle between list and grid of places  
+- `DetailsScreen` – Shows more info about a selected place  
+
+---
+
+## 🔧 Tools & Tech
+
+- **Flutter** (latest stable)  
+- **Dart**  
+- **Navigator** for routing  
+- **ListView / GridView** for UI  
+- **Image.network** to display images
+
+---
