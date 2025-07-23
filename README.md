@@ -12,7 +12,7 @@ A simple Flutter app that displays a list of places and includes:
 
 ## 📷 Preview
 
-![Vacation Trip App Preview](https://drive.google.com/drive/folders/17mvRN-v9puwryfpPWDVHov5Yfi2iZy1E)
+[Vacation Trip App Preview](https://drive.google.com/drive/folders/17mvRN-v9puwryfpPWDVHov5Yfi2iZy1E)
 
 ---
 
